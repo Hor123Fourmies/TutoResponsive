@@ -1,0 +1,115 @@
+body
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main
+{
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    background: royalblue;
+    min-height: 800px;
+}
+
+header
+{
+    width: 100%;
+    height: 50px;
+}
+
+#menu-gauche
+{
+    float: left;
+    width: 20%;
+    background: gold;
+    height: 100px;
+}
+
+#contenu
+{
+    float: left;
+    width: 80%;
+    background: lightcoral;
+    height: 100px
+}
+
+footer
+{
+    clear: both;
+    width: 100%;
+}
+
+#hamburger-menu a
+{
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#hamburger-menu span
+{
+    display: none;
+    /*Le bouton ne s'affiche pas et n'occupe pas l'espace différemment de visibility: hidden*/
+    text-align: center;
+    line-height: 5px;
+    padding-bottom: 20px;
+}
+
+/*Media query pour la largeur des tablettes
+ Mettre le code media query après le code*/
+
+@media (max-width: 1138px)
+{
+    #main{
+        width: 100%;
+        /*au lieu de 80%
+        Règle du main ds media*/
+        padding: 0px;
+    }
+}
+
+/*Media query pour la largeur des smartphones*/
+@media (max-width: 812px)
+{
+    #main{
+        width: 100%;
+        padding: 0;
+    }
+
+    #menu-gauche{
+        width: 100%;
+    }
+
+    #contenu{
+        width: 100%;
+    }
+}
+#hamburger-menu a
+{
+    display: none;
+}
+
+#hamburger-menu span
+{
+    display: inline-block;
+}
+
+#hamburger-menu:hover a
+{
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
+
+/*Le bouton change de sens qd on clique dessus*/
+#hamburger-menu:hover span
+{
+    transform: rotate(90deg);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
